@@ -1,8 +1,30 @@
-.form-wrapper {
-  container-type: inline-size;
-  container-name: form-container;
-  padding: 2cqw;
+@layer base, layout;
 
+@layer base {
+  .form-wrapper {
+    container-type: inline-size;
+    container-name: form-container;
+    padding: 2cqw;
+  }
+
+  .form {
+    background-color: color(display-p3 0.98 0.98 0.95);
+    border-radius: 1cqw;
+    box-shadow: 0 0 1cqw color(display-p3 0.1 0.2 0.3 / 0.15);
+    padding: 2cqw;
+  }
+
+  .btn {
+    background-color: color(display-p3 0.2 0.5 0.9);
+    border: none;
+
+    &:hover {
+      background-color: color(display-p3 0.1 0.4 0.8);
+    }
+  }
+}
+
+@layer layout {
   @container form-container (min-width: 600px) {
     .form {
       display: grid;
@@ -21,21 +43,5 @@
       justify-self: end;
       width: fit-content;
     }
-  }
-}
-
-.form {
-  background-color: color(display-p3 0.98 0.98 0.95);
-  border-radius: 1cqw;
-  box-shadow: 0 0 1cqw color(display-p3 0.1 0.2 0.3 / 0.15);
-  padding: 2cqw;
-}
-
-.btn {
-  background-color: color(display-p3 0.2 0.5 0.9);
-  border: none;
-
-  &:hover {
-    background-color: color(display-p3 0.1 0.4 0.8);
   }
 }

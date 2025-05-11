@@ -1,29 +1,36 @@
-.custom-container {
-  container-type: inline-size;
-}
+@layer base, layout;
 
-.custom-card {
-  width: 100%;
-  max-width: 18rem;
-  flex: 1 1 auto;
-  overflow: hidden;
-  border-radius: 0.75rem;
-  display: flex;
-  flex-direction: column;
-
-  .card-img-top {
-    width: 100%;
-    object-fit: cover;
+@layer base {
+  .custom-container {
+    container-type: inline-size;
   }
 
-  @container (min-width: 300px) {
+  .custom-card {
+    width: 100%;
+    max-width: 18rem;
+    flex: 1 1 auto;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column;
+
     .card-img-top {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+/* Layout — estilos condicionales por tamaño de contenedor */
+@layer layout {
+  @container (min-width: 300px) {
+    .custom-card .card-img-top {
       aspect-ratio: 4 / 3;
     }
   }
 
   @container (max-width: 299px) {
-    .card-img-top {
+    .custom-card .card-img-top {
       height: 140px;
     }
   }
