@@ -31,6 +31,10 @@
   }
 }
 
+.nav {
+  justify-content: end;
+}
+
 .nav-link {
   color: map-get($theme-colors, "verde-oscuro");
   letter-spacing: 0.2px;
@@ -47,8 +51,18 @@
     flex-direction: column;
     height: 100px;
   }
+  .nav {
+    justify-content: center;
+  }
 
   .nav-item {
-    font-size: 14px;
+    font-size: 12px;
+  }
+
+  .nav-link {
+    text-transform: lowercase;
+  }
+  .nav-link::first-letter {
+    text-transform: uppercase;
   }
 }

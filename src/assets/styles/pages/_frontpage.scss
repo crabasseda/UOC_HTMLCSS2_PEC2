@@ -60,6 +60,10 @@
     &__text {
       display: grid;
       grid-template-columns: 1fr 1fr;
+    }
+
+    &__text-left,
+    &__text-right {
       text-align: center;
     }
   }
