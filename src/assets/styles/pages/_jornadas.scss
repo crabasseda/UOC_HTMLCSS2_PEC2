@@ -1,14 +1,16 @@
+@use "sass:map";
 .cq-article-wrapper {
   container-type: inline-size;
 }
 
+/* stylelint-disable selector-max-specificity, selector-max-type */
 .card-body:has(h3.title-innovacion) {
   box-shadow: 0 0 5px $text-accent-orange;
 }
 
 :is(h2, h3, h4).section-title {
   font-family: "Segoe UI", sans-serif;
-  border-bottom: 2px solid map-get($theme-colors, "verde-oscuro");
+  border-bottom: 2px solid map.get($theme-colors, "verde-oscuro");
   padding-bottom: 0.5rem;
   font-size: 1.5rem;
 

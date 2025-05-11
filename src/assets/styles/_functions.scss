@@ -1,5 +1,5 @@
 @function tint-color($color, $weight) {
-  @return mix(white, $color, $weight);
+  @return color.mix(white, $color, $weight);
 }
 
 @function px-to-rem($px, $base: 16) {

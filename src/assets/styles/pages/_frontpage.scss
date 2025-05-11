@@ -1,19 +1,21 @@
+@use "sass:map";
+
 .front-page {
   display: block;
   padding: px-to-rem(32);
   text-align: center;
   container-type: inline-size;
 
-  &__image img {
+  &__image {
     width: 100%;
     max-height: px-to-rem(400);
     object-fit: cover;
     border-radius: px-to-rem(16);
   }
 
-  &__title h1 {
+  &__title {
     font-size: px-to-rem(44.8);
-    color: map-get($theme-colors, "secondary");
+    color: map.get($theme-colors, "secondary");
     margin: px-to-rem(32) 0 px-to-rem(16);
   }
 
@@ -32,7 +34,7 @@
   }
 
   @container (min-width: 500px) {
-    .front-page__title h1 {
+    .front-page__title {
       font-size: 3.2rem;
       margin: 1rem 0;
     }
@@ -53,7 +55,7 @@
     gap: px-to-rem(32);
     padding: px-to-rem(32);
 
-    &__title h1 {
+    &__title {
       margin: 0;
     }
 
