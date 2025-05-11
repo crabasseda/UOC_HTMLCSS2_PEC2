@@ -1,0 +1,25 @@
+.footer {
+  height: 60px;
+  padding: 10px;
+  width: 100%;
+  font-family: $font-family-serif;
+  text-align: center;
+  font-size: 0.7rem;
+  color: map-get($theme-colors, "secondary");
+  background-color: map-get($theme-colors, "light");
+
+  &__author {
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  &__email {
+    font-style: italic;
+    text-decoration: none;
+    color: map-get($theme-colors, "verde-oscuro");
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

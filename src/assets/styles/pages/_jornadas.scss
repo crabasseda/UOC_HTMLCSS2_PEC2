@@ -1,0 +1,18 @@
+.cq-article-wrapper {
+  container-type: inline-size;
+}
+
+.card-body:has(h3.title-innovacion) {
+  box-shadow: 0 0 5px $text-accent-orange;
+}
+
+:is(h2, h3, h4).section-title {
+  font-family: "Segoe UI", sans-serif;
+  border-bottom: 2px solid map-get($theme-colors, "verde-oscuro");
+  padding-bottom: 0.5rem;
+  font-size: 1.5rem;
+
+  @container (min-width: 600px) {
+    font-size: 2rem;
+  }
+}

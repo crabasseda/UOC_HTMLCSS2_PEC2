@@ -7,7 +7,12 @@
  * Import variables
  */
 
+// @layer bootstrap, base, layout, components, pages, utilities;
+@import "functions";
 @import "variables";
+
+@import "npm:@fortawesome/fontawesome-free/css/all.css";
+@import "bootstrap/scss/bootstrap.scss";
 
 /**
  * Import npm dependencies
@@ -24,7 +29,11 @@
  */
 
 @import "layouts/home";
-
-/**
+@import "layouts/header";
+@import "layouts/footer";
+@import "pages/form";
+@import "pages/frontpage";
+@import "pages/jornadas";
+@import "pages/participants"; /**
  * Do NOT include anything else in this file!
  */
